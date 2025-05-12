@@ -111,17 +111,21 @@ const ListContainer = styled.div`
   background: linear-gradient(
     90deg,
     rgba(129, 135, 148, 1) 0%,
-    rgba(74, 89, 83, 1) 50%,
+    #3f4342 50%,
     rgba(36, 36, 31, 1) 100%
   );
+
   padding: 16px;
   border-radius: 16px;
   min-width: 280px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   margin-bottom: 20px;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
 `;
 const Header = styled.div`
   display: flex;
@@ -149,7 +153,12 @@ const MenuButton = styled.button`
   }
 `;
 const Menu = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: absolute;
+  gap: 5px;
   top: 40px;
   right: 0;
   background: #fff;
@@ -164,10 +173,16 @@ const MenuItem = styled.button`
   border: none;
   padding: 8px;
   cursor: pointer;
-  color: #333;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  background-color: #333;
+  transition: transform 0.3s ease;
 
   &:hover {
-    background: #ddd;
+    background-color: #474c4c70;
+    box-shadow: 0 0 2px 0 black;
+    transform: scale(1.1);
   }
 `;
 
@@ -211,6 +226,7 @@ const Button = styled.button`
 
 const AddCardButton = styled.button`
   background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(90deg, #000000 0%, #333738 50%, #000000 100%);
   border: none;
   color: white;
   display: flex;
@@ -222,7 +238,8 @@ const AddCardButton = styled.button`
   transition: background 0.3s;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.5);
+    /* background: rgba(54, 254, 9, 0.322); */
+    box-shadow: 0 0 5px 0 white;
   }
 `;
 
@@ -231,7 +248,7 @@ const AddCardContainer = styled.div`
   flex-direction: column;
   gap: 8px;
   margin-top: 8px;
-  background-image: url(https://zastavki.gas-kvas.com/uploads/posts/2024-09/zastavki-gas-kvas-com-pj8p-p-zastavki-na-rabochii-stol-forsazh-1.jpg);
+
   padding: 10px;
   border-radius: 8px;
   position: relative;

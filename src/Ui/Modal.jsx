@@ -9,7 +9,6 @@ const Modal = ({ onClose }) => {
     navigate("/signup");
     onClose();
   };
-  
 
   return (
     <ModalOverlay>
@@ -32,7 +31,7 @@ const ModalOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-
+  backdrop-filter: blur(3px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,8 +64,8 @@ const ButtonContainer = styled.div`
 
 const CloseButton = styled.button`
   display: flex;
-  background-color: #cf2020;
-  color: white;
+  background-color: #737373;
+  color: #ffffff;
   font-size: 14px;
   font-weight: bold;
   border: none;
@@ -75,6 +74,12 @@ const CloseButton = styled.button`
   cursor: pointer;
   margin-top: 10px;
   text-align: center;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 1px 3px 0 black;
+    background-color: #ff0000a4;
+  }
 `;
 
 const SignUpButton = styled.button`
@@ -90,4 +95,9 @@ const SignUpButton = styled.button`
   padding: 6px 12px;
   cursor: pointer;
   margin-top: 10px;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 1px 3px 0 black;
+  }
 `;
