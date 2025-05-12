@@ -212,7 +212,7 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
-  background-color: #e44c3d;
+  background-color: #535050;
   color: white;
   border: none;
   padding: 8px;
@@ -225,6 +225,10 @@ const Button = styled.button`
 `;
 
 const AddCardButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
   background: rgba(255, 255, 255, 0.3);
   background: linear-gradient(90deg, #000000 0%, #333738 50%, #000000 100%);
   border: none;

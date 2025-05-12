@@ -85,6 +85,7 @@ const ListsContainer = styled.div`
   gap: 20px;
   align-items: flex-start;
   min-height: fit-content;
+  padding-left: 15px;
 `;
 
 const AddNewListButton = styled.button`
